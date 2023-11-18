@@ -1,10 +1,10 @@
 # Axios Tutorial
 
 
-<!-- This tutorial is created with an intention to help developers to master the concepts of axios from beginning to advanced where i will cover everything on HTTP request methods, error handling, interceptors, behind the scenes of then() and async await.
+ This tutorial is created with an intention to help developers to master the concepts of axios from beginning to advanced where i will cover everything on HTTP request methods, error handling, interceptors, behind the scenes of then() and async await.
 You can reach me at: abhishek.bhattarai61067@gmail.com if you have any queries.
 Other credit goes to john-smilga and dalpat rathore.
- -->
+ 
 
 #### React Course
 
