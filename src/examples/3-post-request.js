@@ -1,45 +1,53 @@
-import { useState } from 'react';
-import axios from 'axios';
-const url = 'https://course-api.com/axios-tutorial-post';
+import { useEffect, useState } from "react";
+import axios from "axios";
+const url = "https://jsonplaceholder.typicode.com/posts";
 
 const PostRequest = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      // payload is the object and is a second argument of axios.post
+      const { response } = await axios.post(url, {
+        name,
+        email,
+      });
+      console.log("response: ", response);
+    } catch (e) {}
     console.log(name, email);
   };
 
   return (
     <section>
-      <h2 className='text-center'>post request</h2>
-      <form className='form' onSubmit={handleSubmit}>
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+      <h2 className="text-center">post request</h2>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             name
           </label>
           <input
-            type='text'
-            className='form-input'
-            id='name'
+            type="text"
+            className="form-input"
+            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div className='form-row'>
-          <label htmlFor='email' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="email" className="form-label">
             email
           </label>
           <input
-            type='email'
-            className='form-input'
-            id='email'
+            type="email"
+            className="form-input"
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           login
         </button>
       </form>
