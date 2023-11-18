@@ -4,6 +4,7 @@ import HeaderRequest from './examples/2-headers.js'
 import PostRequest from './examples/3-post-request.js'
 import './axios-global-defaults/axios-global-defaults'
 import GlobalDefaults from './examples/4-global-instance'
+import CustomInstance from './examples/5-custom-instance'
 function App() {
   return (
     <main>
@@ -11,7 +12,8 @@ function App() {
       {/* <FirstRequest/> */}
 {/* <HeaderRequest/> */}
 {/* <PostRequest/> */}
-<GlobalDefaults/>
+{/* <GlobalDefaults/> */}
+<CustomInstance/>
 
     </main>
   );
