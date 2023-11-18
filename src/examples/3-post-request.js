@@ -10,7 +10,9 @@ const PostRequest = () => {
     e.preventDefault();
     try {
       // payload is the object and is a second argument of axios.post
-      const { response } = await axios.post(url, {
+      const { response } = await axios.post(url, 
+        // ES6 object shorthand
+        {
         name,
         email,
       });
